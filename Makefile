@@ -21,11 +21,11 @@ $(DIR)/id3.core.js: id3.js id3v1.js id3v2.js id3v2frames.js id4.js
 $(DIR)/id3.dev.js: $(LIBS:%=$(DIR)/%)
 
 $(DIR)/%.js:
-    cat $^ > $@
+	cat $^ > $@
 
 $(DIR)/id3.min.js: $(DIR)/id3.dev.js
-    java -jar $(CLOSURE_COMPILER) --compilation_level ADVANCED_OPTIMIZATIONS \
-        --js $< > $@
+	java -jar $(CLOSURE_COMPILER) --compilation_level ADVANCED_OPTIMIZATIONS \
+		--js $< > $@
 
 clean:
-    rm -f dist/*
+	rm -f dist/*
