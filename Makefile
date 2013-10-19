@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/master
 # build id3.js
 
 # output dir
@@ -27,6 +30,7 @@ $(DIR)/%.js:
 $(DIR)/id3.min.js: $(DIR)/id3.dev.js
 	java -jar $(CLOSURE_COMPILER) --compilation_level ADVANCED_OPTIMIZATIONS \
 		--js $< > $@
+<<<<<<< HEAD
 =======
 # build default.js
 CLOSURE_COMPILER=/usr/local/closure-compiler/compiler.jar
@@ -72,6 +76,8 @@ java -jar "$CLOSURE_COMPILER" \
 
 
 >>>>>>> c2b6033... Add Makefile
+=======
+>>>>>>> origin/master
 
 clean:
 	rm -f dist/*
